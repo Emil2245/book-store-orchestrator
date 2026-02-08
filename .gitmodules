@@ -1,0 +1,12 @@
+[submodule "services/authors"]
+	path = services/authors
+	url = https://github.com/emil2245/app-authors-helidon.git
+[submodule "services/books"]
+	path = services/books
+	url = https://github.com/emil2245/app-books-helidon.git
+[submodule "services/customers"]
+	path = services/customers
+	url = https://github.com/emil2245/app-customers-micronaut.git
+[submodule "services/recommendations"]
+	path = services/recommendations
+	url = https://github.com/emil2245/app-recommend-micronaut.git

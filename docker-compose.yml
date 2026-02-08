@@ -1,0 +1,73 @@
+
+services:
+  authors-service:
+    build: 
+      context: ./services/authors
+      dockerfile: Dockerfile
+    container_name: authors-service
+    ports:
+      - "8081:8081"
+    environment:
+      - SERVER_PORT=8081
+    networks:
+      - bookstore-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  books-service:
+    build:
+      context: ./services/books
+      dockerfile: Dockerfile
+    container_name: books-service
+    ports:
+      - "8082:8082"
+    environment:
+      - SERVER_PORT=8082
+    networks:
+      - bookstore-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  customers-service:
+    build:
+      context: ./services/customers
+      dockerfile: Dockerfile
+    container_name: customers-service
+    ports:
+      - "8083:8083"
+    environment:
+      - MICRONAUT_SERVER_PORT=8083
+    networks:
+      - bookstore-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8083/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  recommendations-service:
+    build:
+      context: ./services/recommendations
+      dockerfile: Dockerfile
+    container_name: recommendations-service
+    ports:
+      - "8084:8084"
+    environment:
+      - MICRONAUT_SERVER_PORT=8084
+    networks:
+      - bookstore-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8084/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  bookstore-network:
+    driver: bridge
