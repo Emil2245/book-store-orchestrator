@@ -54,6 +54,7 @@ services:
       - --providers.consulCatalog.exposedByDefault=true
       - --providers.consulCatalog.defaultRule=PathPrefix(`/{{ .Name }}`)
       - --entrypoints.web.address=:80
+      - --metrics.prometheus=true
     ports:
       - 8888:8080
       - 8080:80
@@ -67,6 +68,8 @@ services:
       -ui
       -bind 0.0.0.0
       -client 0.0.0.0
+    environment:
+      CONSUL_LOCAL_CONFIG: '{"telemetry": {"prometheus_retention_time": "24h"}}'
     expose:
       - 8500
     ports:
@@ -94,7 +97,7 @@ services:
 
 
   authors:
-    image: emil2245/app-authors-helidon:latest
+    image: emil2245/app-authors-helidon:2.0.0
     environment:
       DB_HOST: dbserver
       DB_NAME: distribuida
@@ -114,7 +117,7 @@ services:
       - proxy
 
   books:
-    image: emil2245/app-books-helidon:latest
+    image: emil2245/app-books-helidon:2.0.0
     environment:
       DB_HOST: dbserver
       DB_NAME: distribuida
@@ -134,7 +137,7 @@ services:
       - proxy
 
   customers:
-    image: emil2245/app-customers-micronaut:latest
+    image: emil2245/app-customers-micronaut:4.0.0
     environment:
       DATASOURCES_DEFAULT_URL: jdbc:postgresql://dbserver:5432/distribuida
       DATASOURCES_DEFAULT_USERNAME: postgres
@@ -151,7 +154,7 @@ services:
       - proxy
 
   recommend:
-    image: emil2245/app-recommend-micronaut:latest
+    image: emil2245/app-recommendations-micronaut:4.0.0
     environment:
       CONSUL_HOST: consul
       CONSUL_PORT: 8500
@@ -165,22 +168,8 @@ services:
       - consul
       - proxy
 
-  # app-web-vaadin:
-  #   image: emil2245/app-web-vaadin:latest
-  #   environment:
-  #     SERVER_PORT: 8080
-  #     GATEWAY_URL: http://proxy:80
-  #   ports:
-  #     - 8099:8080
-  #   depends_on:
-  #     - authors
-  #     - books
-  #     - customers
-  #     - recommend
-  #     - proxy
-
   app-front:
-    image: emil2245/app-web-vaadin:latest
+    image: emil2245/app-web-vaadin:2.0.0
     environment:
       SERVER_PORT: 8080
       GATEWAY_URL: http://proxy:80

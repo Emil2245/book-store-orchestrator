@@ -5,7 +5,7 @@ REM ====================================
 REM Configuration
 REM ====================================
 set DOCKER_USER=emil2245
-set VERSION=1.0.0
+set VERSION=4.0.0
 set SCRIPT_DIR=%~dp0
 set SERVICES_DIR=%SCRIPT_DIR%services
 

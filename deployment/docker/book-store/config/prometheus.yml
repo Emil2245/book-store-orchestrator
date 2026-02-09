@@ -11,6 +11,9 @@ scrape_configs:
       - targets: ['proxy:8080']
 
   - job_name: 'consul'
+    metrics_path: '/v1/agent/metrics'
+    params:
+      format: ['prometheus']
     static_configs:
       - targets: ['consul:8500']
 
