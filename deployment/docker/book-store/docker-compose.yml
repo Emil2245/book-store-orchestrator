@@ -1,9 +1,8 @@
 services:
-
   prometheus:
     image: prom/prometheus:latest
     volumes:
-      - ./config:/etc/prometheus
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090
     expose:
@@ -40,17 +39,21 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: distribuida
     volumes:
-      - "C:/Users/emilv/OneDrive/Documents/ProgDistribuida/db-distribuida:/var/lib/postgresql/data"
+      - "./db:/var/lib/postgresql/data"
+    ports:
+      - 5433:5432
 
   proxy:
-    image: traefik:3.6
-    command: |
-      --api.insecure=true
-      --api.dashboard=true
-      --providers.consulCatalog
-      --providers.consulCatalog.refreshInterval=5s
-      --providers.consulCatalog.exposedByDefault=false
-      --providers.consulCatalog.endpoint.address=consul:8500
+    image: traefik:3.2
+    command:
+      - --api.insecure=true
+      - --api.dashboard=true
+      - --providers.consulCatalog
+      - --providers.consulCatalog.refreshInterval=5s
+      - --providers.consulCatalog.endpoint.address=consul:8500
+      - --providers.consulCatalog.exposedByDefault=true
+      - --providers.consulCatalog.defaultRule=PathPrefix(`/{{ .Name }}`)
+      - --entrypoints.web.address=:80
     ports:
       - 8888:8080
       - 8080:80
@@ -69,70 +72,66 @@ services:
     ports:
       - 8500:8500
 
-#esto NO VALIO
-#  ollama:
-#    image: ollama/ollama:latest
-#    container_name: ollama
-#    restart: unless-stopped
-#    ports:
-#      - "11434:11434"
-#    volumes:
-#      - ollama-data:/root/.ollama
-#    environment:
-#      - OLLAMA_HOST=0.0.0.0
-#    entrypoint: ["/usr/bin/bash", "-c"]
-#    command: >
-#      "ollama serve &
-#      sleep 5;
-#      ollama pull phi;
-#      wait"
-
-
-
-#  llamacpp:
-#    image: ghcr.io/ggml-org/llama.cpp:server
-#    container_name: llamacpp
-#    volumes:
-#      - ./models:/models
-#    ports:
-#      - "8081:8080"
-#    command: -m /models/llama-3.2-3b-instruct-q4_k_m.gguf --port 8080 --host 0.0.0.0 -n 512 --embedding
-#    healthcheck:
-#      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-#      interval: 10s
-#      timeout: 5s
-#      retries: 5
+  # llamacpp:
+  #   image: ghcr.io/ggml-org/llama.cpp:server
+  #   container_name: llamacpp
+  #   volumes:
+  #     - ./models:/models
+  #   ports:
+  #     - 8081:8080
+  #   command: -m /models/llama-3.2-3b-instruct-q4_k_m.gguf --port 8080 --host 0.0.0.0 --no-warmup -n 512 --embedding
+  #   healthcheck:
+  #     test: [ "CMD", "curl", "-f", "http://localhost:8080/health" ]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 5G
+  #       reservations:
+  #         memory: 3G
 
 
   authors:
     image: emil2245/app-authors-helidon:latest
     environment:
       DB_HOST: dbserver
+      DB_NAME: distribuida
+      DB_USER: postgres
+      DB_PASSWORD: postgres
       CONSUL_HOST: consul
+      CONSUL_PORT: 8500
       SERVICE_NAME: app-authors
       SERVER_PORT: 8080
     expose:
       - 8080
-    ports:
-      - 8090:8080
+    # ports:
+    #   - 8090:8080
     depends_on:
       - dbserver
       - consul
+      - proxy
 
   books:
     image: emil2245/app-books-helidon:latest
     environment:
       DB_HOST: dbserver
+      DB_NAME: distribuida
+      DB_USER: postgres
+      DB_PASSWORD: postgres
       CONSUL_HOST: consul
+      CONSUL_PORT: 8500
       SERVICE_NAME: app-books
       SERVER_PORT: 8080
     expose:
       - 8080
-    ports:
-      - 8070:8080
+    # ports:
+    #   - 8091:8080
     depends_on:
       - dbserver
       - consul
+      - proxy
 
   customers:
     image: emil2245/app-customers-micronaut:latest
@@ -144,8 +143,8 @@ services:
       CONSUL_PORT: 8500
     expose:
       - 8080
-    ports:
-      - 8082:8080
+    # ports:
+    #   - 8092:8080
     depends_on:
       - dbserver
       - consul
@@ -156,29 +155,40 @@ services:
     environment:
       CONSUL_HOST: consul
       CONSUL_PORT: 8500
-      LLAMA_BASE_URL: http://llamacpp:8080/v1
-      OPENAI_API_KEY: not-needed
+      LANGCHAIN4J_OPEN_AI_API_KEY: ${LANGCHAIN4J_OPEN_AI_API_KEY}
+      LANGCHAIN4J_OPEN_AI_BASE_URL: "https://api.groq.com/openai/v1"
+      LANGCHAIN4J_OPEN_AI_CHAT_MODEL_MODEL_NAME: "llama-3.3-70b-versatile"
     expose:
       - 8080
-    ports:
-      - 9090:8080
     depends_on:
+      - dbserver
       - consul
-      - llamacpp
       - proxy
 
-  app-web-vaadin:
+  # app-web-vaadin:
+  #   image: emil2245/app-web-vaadin:latest
+  #   environment:
+  #     SERVER_PORT: 8080
+  #     GATEWAY_URL: http://proxy:80
+  #   ports:
+  #     - 8099:8080
+  #   depends_on:
+  #     - authors
+  #     - books
+  #     - customers
+  #     - recommend
+  #     - proxy
+
+  app-front:
     image: emil2245/app-web-vaadin:latest
     environment:
       SERVER_PORT: 8080
+      GATEWAY_URL: http://proxy:80
     ports:
-      - 8099:8080
+      - 8098:8080
     depends_on:
       - authors
       - books
       - customers
       - recommend
       - proxy
-#volumes:
-#  ollama-data:
-

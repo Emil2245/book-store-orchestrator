@@ -1,0 +1,334 @@
+authors-1  | 2026.02.09 06:43:36 INFO io.helidon.logging.jul.JulProvider Thread[#1,main,5,main]: Logging at runtime configured using classpath: /logging.properties
+authors-1  | 2026.02.09 06:43:45 WARNING io.helidon.integrations.micrometer.cdi.MicrometerCdiExtension Thread[#1,main,5,main]: Micrometer integration is deprecated and will be removed in a future major release.
+authors-1  | 2026.02.09 06:43:45 INFO com.zaxxer.hikari.HikariDataSource Thread[#1,main,5,main]: distribuida - Starting...
+authors-1  | 2026.02.09 06:43:46 INFO com.zaxxer.hikari.pool.HikariPool Thread[#1,main,5,main]: distribuida - Added connection org.postgresql.jdbc.PgConnection@d36c1c3
+authors-1  | 2026.02.09 06:43:46 INFO com.zaxxer.hikari.HikariDataSource Thread[#1,main,5,main]: distribuida - Start completed.
+authors-1  | 2026.02.09 06:43:46 INFO org.hibernate.jpa.internal.util.LogHelper Thread[#1,main,5,main]: HHH000204: Processing PersistenceUnitInfo [name: pu1]
+authors-1  | 2026.02.09 06:43:47 INFO org.hibernate.Version Thread[#1,main,5,main]: HHH000412: Hibernate ORM core version 6.3.1.Final
+authors-1  | 2026.02.09 06:43:47 INFO org.hibernate.cfg.Environment Thread[#1,main,5,main]: HHH000205: Loaded properties from resource hibernate.properties: {}
+authors-1  | 2026.02.09 06:43:47 INFO org.hibernate.cache.internal.RegionFactoryInitiator Thread[#1,main,5,main]: HHH000026: Second-level cache disabled
+authors-1  | 2026.02.09 06:43:49 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Thread[#1,main,5,main]: HHH000490: Using JTA platform [io.helidon.integrations.cdi.hibernate.CDISEJtaPlatform$Proxy$_$$_WeldClientProxy]
+authors-1  | 2026.02.09 06:43:49 WARN org.hibernate.orm.deprecation Thread[#1,main,5,main]: HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+authors-1  | 2026.02.09 06:43:50 INFO org.hibernate.validator.internal.util.Version Thread[#1,main,5,main]: HV000001: Hibernate Validator 8.0.2.Final
+authors-1  | 2026.02.09 06:43:51 WARN org.hibernate.mapping.RootClass Thread[#1,main,5,main]: HHH000038: Composite-id class does not override equals(): com.programacion.distribuida.authors.model.BookAuthorId
+authors-1  | 2026.02.09 06:43:51 WARN org.hibernate.mapping.RootClass Thread[#1,main,5,main]: HHH000039: Composite-id class does not override hashCode(): com.programacion.distribuida.authors.model.BookAuthorId
+authors-1  | 2026.02.09 06:43:53 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#1,main,5,main]: Service registered in Consul: app-authors-88ebb501bdae-8080 at 172.18.0.8:8080
+authors-1  | 2026.02.09 06:43:53 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#1,main,5,main]: Consul client initialized successfully
+authors-1  | 2026.02.09 06:43:53 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#1,main,5,main]: Registering JAX-RS Application: HelidonMP
+authors-1  | 2026.02.09 06:43:54 INFO io.helidon.webserver.ServerListener VirtualThread[#66,start @default (/0.0.0.0:8080)]/runnable@ForkJoinPool-1-worker-1: [0x2a58461f] http://0.0.0.0:8080 bound for socket '@default'
+authors-1  | 2026.02.09 06:43:54 INFO io.helidon.webserver.LoomServer Thread[#1,main,5,main]: Started all channels in 31 milliseconds. 19378 milliseconds since JVM startup. Java 21.0.10+8-LTS-217
+authors-1  | 2026.02.09 06:43:54 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#1,main,5,main]: Server started on http://localhost:8080 (and all other host addresses) in 19395 milliseconds (since JVM startup).
+authors-1  | 2026.02.09 06:43:54 INFO io.helidon.common.features.HelidonFeatures Thread[#69,features-thread,5,main]: Helidon MP 4.3.4 features: [Config, Fault Tolerance, JPA, JTA, Micrometer, Server]
+authors-1  | 2026.02.09 06:43:54 INFO io.helidon.common.features.HelidonFeatures.preview Thread[#69,features-thread,5,main]: You are using preview features. These APIs are production ready, yet may change more frequently. Please follow Helidon release changelog!
+authors-1  | 2026.02.09 06:43:54 INFO io.helidon.common.features.HelidonFeatures.preview Thread[#69,features-thread,5,main]: 	Preview feature: Micrometer (Micrometer)
+authors-1  | 2026.02.09 06:49:01 INFO io.helidon.Main Thread[#21,helidon-shutdown-thread,5,main]: Shutdown requested by JVM shutting down
+authors-1  | 2026.02.09 06:49:01 INFO io.helidon.webserver.ServerListener Thread[#64,server-@default-listener,5,main]: [0x2a58461f] @default socket closed.
+authors-1  | 2026.02.09 06:49:01 INFO io.helidon.webserver.LoomServer Thread[#21,helidon-shutdown-thread,5,main]: Helidon WebServer stopped all channels.
+authors-1  | 2026.02.09 06:49:01 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#21,helidon-shutdown-thread,5,main]: Server stopped in 19 milliseconds.
+authors-1  | 2026.02.09 06:49:01 INFO com.zaxxer.hikari.HikariDataSource Thread[#21,helidon-shutdown-thread,5,main]: distribuida - Shutdown initiated...
+authors-1  | 2026.02.09 06:49:01 INFO com.zaxxer.hikari.HikariDataSource Thread[#21,helidon-shutdown-thread,5,main]: distribuida - Shutdown completed.
+authors-1  | 2026.02.09 06:49:01 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#21,helidon-shutdown-thread,5,main]: Service deregistered from Consul: app-authors-88ebb501bdae-8080
+authors-1  | 2026.02.09 06:49:01 INFO org.hibernate.orm.beans Thread[#21,helidon-shutdown-thread,5,main]: HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerImmediateAccessImpl@6391fdbf
+authors-1  | 2026.02.09 06:49:01 INFO io.helidon.Main Thread[#21,helidon-shutdown-thread,5,main]: Shutdown finished
+authors-1  | 2026.02.09 06:50:21 INFO io.helidon.logging.jul.JulProvider Thread[#1,main,5,main]: Logging at runtime configured using classpath: /logging.properties
+authors-1  | 2026.02.09 06:50:27 WARNING io.helidon.integrations.micrometer.cdi.MicrometerCdiExtension Thread[#1,main,5,main]: Micrometer integration is deprecated and will be removed in a future major release.
+authors-1  | 2026.02.09 06:50:28 INFO com.zaxxer.hikari.HikariDataSource Thread[#1,main,5,main]: distribuida - Starting...
+authors-1  | 2026.02.09 06:50:28 INFO com.zaxxer.hikari.pool.HikariPool Thread[#1,main,5,main]: distribuida - Added connection org.postgresql.jdbc.PgConnection@4d69d288
+authors-1  | 2026.02.09 06:50:29 INFO com.zaxxer.hikari.HikariDataSource Thread[#1,main,5,main]: distribuida - Start completed.
+authors-1  | 2026.02.09 06:50:29 INFO org.hibernate.jpa.internal.util.LogHelper Thread[#1,main,5,main]: HHH000204: Processing PersistenceUnitInfo [name: pu1]
+authors-1  | 2026.02.09 06:50:29 INFO org.hibernate.Version Thread[#1,main,5,main]: HHH000412: Hibernate ORM core version 6.3.1.Final
+authors-1  | 2026.02.09 06:50:29 INFO org.hibernate.cfg.Environment Thread[#1,main,5,main]: HHH000205: Loaded properties from resource hibernate.properties: {}
+authors-1  | 2026.02.09 06:50:29 INFO org.hibernate.cache.internal.RegionFactoryInitiator Thread[#1,main,5,main]: HHH000026: Second-level cache disabled
+authors-1  | 2026.02.09 06:50:30 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Thread[#1,main,5,main]: HHH000490: Using JTA platform [io.helidon.integrations.cdi.hibernate.CDISEJtaPlatform$Proxy$_$$_WeldClientProxy]
+authors-1  | 2026.02.09 06:50:30 WARN org.hibernate.orm.deprecation Thread[#1,main,5,main]: HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+authors-1  | 2026.02.09 06:50:30 INFO org.hibernate.validator.internal.util.Version Thread[#1,main,5,main]: HV000001: Hibernate Validator 8.0.2.Final
+authors-1  | 2026.02.09 06:50:31 WARN org.hibernate.mapping.RootClass Thread[#1,main,5,main]: HHH000038: Composite-id class does not override equals(): com.programacion.distribuida.authors.model.BookAuthorId
+authors-1  | 2026.02.09 06:50:31 WARN org.hibernate.mapping.RootClass Thread[#1,main,5,main]: HHH000039: Composite-id class does not override hashCode(): com.programacion.distribuida.authors.model.BookAuthorId
+authors-1  | 2026.02.09 06:50:32 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#1,main,5,main]: Service registered in Consul: app-authors-88ebb501bdae-8080 at 172.18.0.9:8080
+authors-1  | 2026.02.09 06:50:32 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#1,main,5,main]: Consul client initialized successfully
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#1,main,5,main]: Registering JAX-RS Application: HelidonMP
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.webserver.ServerListener VirtualThread[#65,start @default (/0.0.0.0:8080)]/runnable@ForkJoinPool-1-worker-1: [0x335b406d] http://0.0.0.0:8080 bound for socket '@default'
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.webserver.LoomServer Thread[#1,main,5,main]: Started all channels in 11 milliseconds. 11870 milliseconds since JVM startup. Java 21.0.10+8-LTS-217
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#1,main,5,main]: Server started on http://localhost:8080 (and all other host addresses) in 11877 milliseconds (since JVM startup).
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.common.features.HelidonFeatures Thread[#68,features-thread,5,main]: Helidon MP 4.3.4 features: [Config, Fault Tolerance, JPA, JTA, Micrometer, Server]
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.common.features.HelidonFeatures.preview Thread[#68,features-thread,5,main]: You are using preview features. These APIs are production ready, yet may change more frequently. Please follow Helidon release changelog!
+authors-1  | 2026.02.09 06:50:32 INFO io.helidon.common.features.HelidonFeatures.preview Thread[#68,features-thread,5,main]: 	Preview feature: Micrometer (Micrometer)
+authors-1  | 2026.02.09 06:52:46 INFO com.arjuna.ats.arjuna VirtualThread[#92,[0x335b406d 0x07f1db28] WebServer socket]/runnable@ForkJoinPool-1-worker-1: ARJUNA012170: TransactionStatusManager started on port 38209 and host 127.0.0.1 with service com.arjuna.ats.arjuna.recovery.ActionStatusService
+authors-1  | ANTLR Tool version 4.10.1 used for code generation does not match the current runtime version 4.13.2
+authors-1  | ANTLR Runtime version 4.10.1 used for parser compilation does not match the current runtime version 4.13.2
+authors-1  | ANTLR Tool version 4.10.1 used for code generation does not match the current runtime version 4.13.2
+authors-1  | ANTLR Runtime version 4.10.1 used for parser compilation does not match the current runtime version 4.13.2
+authors-1  | Hibernate: 
+authors-1  |     select
+authors-1  |         a1_0.id,
+authors-1  |         a1_0.name,
+authors-1  |         a1_0.version 
+authors-1  |     from
+authors-1  |         author a1_0
+authors-1  | 2026.02.09 06:52:46 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper VirtualThread[#92,[0x335b406d 0x07f1db28] WebServer socket]/runnable@ForkJoinPool-1-worker-1: SQL Error: 0, SQLState: 42P01
+authors-1  | 2026.02.09 06:52:46 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper VirtualThread[#92,[0x335b406d 0x07f1db28] WebServer socket]/runnable@ForkJoinPool-1-worker-1: ERROR: relation "author" does not exist
+authors-1  |   Position: 44
+authors-1  | 2026.02.09 06:52:46 WARNING org.glassfish.jersey.server.ServerRuntime$Responder VirtualThread[#92,[0x335b406d 0x07f1db28] WebServer socket]/runnable@ForkJoinPool-1-worker-1: An exception mapping did not successfully produce and processed a response. Logging the exception propagated to the default exception mapper.
+authors-1  | org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select a1_0.id,a1_0.name,a1_0.version from author a1_0] [ERROR: relation "author" does not exist
+authors-1  |   Position: 44] [n/a]
+authors-1  | 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+authors-1  | 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+authors-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+authors-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:258)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:164)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+authors-1  | 	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66)
+authors-1  | 	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:200)
+authors-1  | 	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+authors-1  | 	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361)
+authors-1  | 	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168)
+authors-1  | 	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93)
+authors-1  | 	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+authors-1  | 	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:109)
+authors-1  | 	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+authors-1  | 	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+authors-1  | 	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509)
+authors-1  | 	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427)
+authors-1  | 	at org.hibernate.query.Query.getResultList(Query.java:120)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository.listAll(AuthorRepository.java:33)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository$Proxy$_$$_WeldSubclass.listAll$$super(Unknown Source)
+authors-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+authors-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.TerminalAroundInvokeInvocationContext.proceedInternal(TerminalAroundInvokeInvocationContext.java:55)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:86)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:181)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:169)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:37)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:74)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:31)
+authors-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+authors-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+authors-1  | 	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:75)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:90)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:73)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+authors-1  | 	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:80)
+authors-1  | 	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository$Proxy$_$$_WeldSubclass.listAll(Unknown Source)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository$Proxy$_$$_WeldClientProxy.listAll(Unknown Source)
+authors-1  | 	at com.programacion.distribuida.authors.rest.AuthorRest.findAll(AuthorRest.java:29)
+authors-1  | 	at com.programacion.distribuida.authors.rest.AuthorRest$Proxy$_$$_WeldClientProxy.findAll(Unknown Source)
+authors-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+authors-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+authors-1  | 	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+authors-1  | 	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+authors-1  | 	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+authors-1  | 	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:274)
+authors-1  | 	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+authors-1  | 	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+authors-1  | 	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+authors-1  | 	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+authors-1  | 	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+authors-1  | 	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:266)
+authors-1  | 	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:253)
+authors-1  | 	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:696)
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.doHandle(JaxRsService.java:287)
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.lambda$handle$3(JaxRsService.java:238)
+authors-1  | 	at io.helidon.common.context.Contexts.runInContext(Contexts.java:117)
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.handle(JaxRsService.java:238)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl$RoutingExecutor.doRoute(HttpRoutingImpl.java:174)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl$RoutingExecutor.call(HttpRoutingImpl.java:132)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl$RoutingExecutor.call(HttpRoutingImpl.java:110)
+authors-1  | 	at io.helidon.webserver.http.ErrorHandlers.runWithErrorHandling(ErrorHandlers.java:76)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:136)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterProceeder.proceed(Filters.java:158)
+authors-1  | 	at io.helidon.webserver.observe.metrics.MetricsFeature.lambda$configureVendorMetrics$2(MetricsFeature.java:91)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:128)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterProceeder.proceed(Filters.java:158)
+authors-1  | 	at io.helidon.webserver.RequestScopeFeature$RequestScopeFilter.filter(RequestScopeFeature.java:105)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:128)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterProceeder.proceed(Filters.java:158)
+authors-1  | 	at io.helidon.common.context.Contexts.runInContext(Contexts.java:117)
+authors-1  | 	at io.helidon.webserver.context.ContextRoutingFeature.filter(ContextRoutingFeature.java:72)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:128)
+authors-1  | 	at io.helidon.webserver.http.Filters.executeFilters(Filters.java:93)
+authors-1  | 	at io.helidon.webserver.http.Filters.lambda$filter$1(Filters.java:89)
+authors-1  | 	at io.helidon.webserver.http.ErrorHandlers.runWithErrorHandling(ErrorHandlers.java:76)
+authors-1  | 	at io.helidon.webserver.http.Filters.filter(Filters.java:89)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl.route(HttpRoutingImpl.java:74)
+authors-1  | 	at io.helidon.webserver.http1.Http1Connection.route(Http1Connection.java:548)
+authors-1  | 	at io.helidon.webserver.http1.Http1Connection.handle(Http1Connection.java:216)
+authors-1  | 	at io.helidon.webserver.ConnectionHandler.run(ConnectionHandler.java:190)
+authors-1  | 	at io.helidon.common.task.InterruptableTask.call(InterruptableTask.java:47)
+authors-1  | 	at io.helidon.webserver.ThreadPerTaskExecutor$ThreadBoundFuture.run(ThreadPerTaskExecutor.java:240)
+authors-1  | 	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+authors-1  | Caused by: org.postgresql.util.PSQLException: ERROR: relation "author" does not exist
+authors-1  |   Position: 44
+authors-1  | 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
+authors-1  | 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2531)
+authors-1  | 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429)
+authors-1  | 	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526)
+authors-1  | 	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436)
+authors-1  | 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+authors-1  | 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:139)
+authors-1  | 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+authors-1  | 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+authors-1  | 	at io.helidon.integrations.jdbc.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:88)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:240)
+authors-1  | 	... 89 more
+authors-1  | 
+authors-1  | 2026.02.09 06:52:46 WARNING io.helidon.webserver.http.ErrorHandlers VirtualThread[#92,[0x335b406d 0x07f1db28] WebServer socket]/runnable@ForkJoinPool-1-worker-1: [0x335b406d 0x07f1db28] Request failed: HttpPrologue[protocol=HTTP, protocolVersion=1.1, method=GET, uriPath=/authors, query=, fragment=], cannot send error response, as response already sent
+authors-1  | io.helidon.http.RequestException: Internal exception in JAX-RS processing
+authors-1  | 	at io.helidon.http.RequestException$Builder.build(RequestException.java:157)
+authors-1  | 	at io.helidon.webserver.http.ErrorHandlers.unhandledError(ErrorHandlers.java:197)
+authors-1  | 	at io.helidon.webserver.http.ErrorHandlers.runWithErrorHandling(ErrorHandlers.java:105)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:136)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterProceeder.proceed(Filters.java:158)
+authors-1  | 	at io.helidon.webserver.observe.metrics.MetricsFeature.lambda$configureVendorMetrics$2(MetricsFeature.java:91)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:128)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterProceeder.proceed(Filters.java:158)
+authors-1  | 	at io.helidon.webserver.RequestScopeFeature$RequestScopeFilter.filter(RequestScopeFeature.java:105)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:128)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterProceeder.proceed(Filters.java:158)
+authors-1  | 	at io.helidon.common.context.Contexts.runInContext(Contexts.java:117)
+authors-1  | 	at io.helidon.webserver.context.ContextRoutingFeature.filter(ContextRoutingFeature.java:72)
+authors-1  | 	at io.helidon.webserver.http.Filters$FilterChainImpl.proceed(Filters.java:128)
+authors-1  | 	at io.helidon.webserver.http.Filters.executeFilters(Filters.java:93)
+authors-1  | 	at io.helidon.webserver.http.Filters.lambda$filter$1(Filters.java:89)
+authors-1  | 	at io.helidon.webserver.http.ErrorHandlers.runWithErrorHandling(ErrorHandlers.java:76)
+authors-1  | 	at io.helidon.webserver.http.Filters.filter(Filters.java:89)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl.route(HttpRoutingImpl.java:74)
+authors-1  | 	at io.helidon.webserver.http1.Http1Connection.route(Http1Connection.java:548)
+authors-1  | 	at io.helidon.webserver.http1.Http1Connection.handle(Http1Connection.java:216)
+authors-1  | 	at io.helidon.webserver.ConnectionHandler.run(ConnectionHandler.java:190)
+authors-1  | 	at io.helidon.common.task.InterruptableTask.call(InterruptableTask.java:47)
+authors-1  | 	at io.helidon.webserver.ThreadPerTaskExecutor$ThreadBoundFuture.run(ThreadPerTaskExecutor.java:240)
+authors-1  | 	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+authors-1  | Caused by: io.helidon.http.InternalServerException: Internal exception in JAX-RS processing
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.doHandle(JaxRsService.java:310)
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.lambda$handle$3(JaxRsService.java:238)
+authors-1  | 	at io.helidon.common.context.Contexts.runInContext(Contexts.java:117)
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.handle(JaxRsService.java:238)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl$RoutingExecutor.doRoute(HttpRoutingImpl.java:174)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl$RoutingExecutor.call(HttpRoutingImpl.java:132)
+authors-1  | 	at io.helidon.webserver.http.HttpRoutingImpl$RoutingExecutor.call(HttpRoutingImpl.java:110)
+authors-1  | 	at io.helidon.webserver.http.ErrorHandlers.runWithErrorHandling(ErrorHandlers.java:76)
+authors-1  | 	... 22 more
+authors-1  | Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select a1_0.id,a1_0.name,a1_0.version from author a1_0] [ERROR: relation "author" does not exist
+authors-1  |   Position: 44] [n/a]
+authors-1  | 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+authors-1  | 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+authors-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+authors-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:258)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:164)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+authors-1  | 	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66)
+authors-1  | 	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:200)
+authors-1  | 	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+authors-1  | 	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361)
+authors-1  | 	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168)
+authors-1  | 	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93)
+authors-1  | 	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+authors-1  | 	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:109)
+authors-1  | 	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+authors-1  | 	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+authors-1  | 	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509)
+authors-1  | 	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427)
+authors-1  | 	at org.hibernate.query.Query.getResultList(Query.java:120)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository.listAll(AuthorRepository.java:33)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository$Proxy$_$$_WeldSubclass.listAll$$super(Unknown Source)
+authors-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+authors-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.TerminalAroundInvokeInvocationContext.proceedInternal(TerminalAroundInvokeInvocationContext.java:55)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:86)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:181)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:169)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:37)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:74)
+authors-1  | 	at com.arjuna.ats.jta.cdi.transactional.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:31)
+authors-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+authors-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+authors-1  | 	at org.jboss.weld.interceptor.reader.SimpleInterceptorInvocation$SimpleMethodInvocation.invoke(SimpleInterceptorInvocation.java:75)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeAroundInvoke(InterceptorMethodHandler.java:90)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.executeInterception(InterceptorMethodHandler.java:73)
+authors-1  | 	at org.jboss.weld.interceptor.proxy.InterceptorMethodHandler.invoke(InterceptorMethodHandler.java:56)
+authors-1  | 	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:80)
+authors-1  | 	at org.jboss.weld.bean.proxy.CombinedInterceptorAndDecoratorStackMethodHandler.invoke(CombinedInterceptorAndDecoratorStackMethodHandler.java:68)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository$Proxy$_$$_WeldSubclass.listAll(Unknown Source)
+authors-1  | 	at com.programacion.distribuida.authors.repository.AuthorRepository$Proxy$_$$_WeldClientProxy.listAll(Unknown Source)
+authors-1  | 	at com.programacion.distribuida.authors.rest.AuthorRest.findAll(AuthorRest.java:29)
+authors-1  | 	at com.programacion.distribuida.authors.rest.AuthorRest$Proxy$_$$_WeldClientProxy.findAll(Unknown Source)
+authors-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+authors-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+authors-1  | 	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+authors-1  | 	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+authors-1  | 	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+authors-1  | 	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+authors-1  | 	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:274)
+authors-1  | 	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+authors-1  | 	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+authors-1  | 	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+authors-1  | 	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+authors-1  | 	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+authors-1  | 	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:266)
+authors-1  | 	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:253)
+authors-1  | 	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:696)
+authors-1  | 	at io.helidon.jersey.webserver.JaxRsService.doHandle(JaxRsService.java:287)
+authors-1  | 	... 29 more
+authors-1  | Caused by: org.postgresql.util.PSQLException: ERROR: relation "author" does not exist
+authors-1  |   Position: 44
+authors-1  | 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
+authors-1  | 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2531)
+authors-1  | 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429)
+authors-1  | 	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526)
+authors-1  | 	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436)
+authors-1  | 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+authors-1  | 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:139)
+authors-1  | 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+authors-1  | 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+authors-1  | 	at io.helidon.integrations.jdbc.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:88)
+authors-1  | 	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:240)
+authors-1  | 	... 89 more
+authors-1  | 
+authors-1  | 2026.02.09 06:53:34 INFO io.helidon.Main Thread[#21,helidon-shutdown-thread,5,main]: Shutdown requested by JVM shutting down
+authors-1  | 2026.02.09 06:53:34 INFO io.helidon.webserver.ServerListener Thread[#63,server-@default-listener,5,main]: [0x335b406d] @default socket closed.
+authors-1  | 2026.02.09 06:53:34 INFO io.helidon.webserver.LoomServer Thread[#21,helidon-shutdown-thread,5,main]: Helidon WebServer stopped all channels.
+authors-1  | 2026.02.09 06:53:34 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#21,helidon-shutdown-thread,5,main]: Server stopped in 16 milliseconds.
+authors-1  | 2026.02.09 06:53:34 INFO com.zaxxer.hikari.HikariDataSource Thread[#21,helidon-shutdown-thread,5,main]: distribuida - Shutdown initiated...
+authors-1  | 2026.02.09 06:53:34 INFO com.zaxxer.hikari.HikariDataSource Thread[#21,helidon-shutdown-thread,5,main]: distribuida - Shutdown completed.
+authors-1  | 2026.02.09 06:53:34 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#21,helidon-shutdown-thread,5,main]: Service deregistered from Consul: app-authors-88ebb501bdae-8080
+authors-1  | 2026.02.09 06:53:34 INFO org.hibernate.orm.beans Thread[#21,helidon-shutdown-thread,5,main]: HHH10005004: Stopping BeanContainer : org.hibernate.resource.beans.container.internal.CdiBeanContainerImmediateAccessImpl@5108c715
+authors-1  | 2026.02.09 06:53:34 INFO io.helidon.Main Thread[#21,helidon-shutdown-thread,5,main]: Shutdown finished
+authors-1  | 2026.02.09 06:54:03 INFO io.helidon.logging.jul.JulProvider Thread[#1,main,5,main]: Logging at runtime configured using classpath: /logging.properties
+authors-1  | 2026.02.09 06:54:08 WARNING io.helidon.integrations.micrometer.cdi.MicrometerCdiExtension Thread[#1,main,5,main]: Micrometer integration is deprecated and will be removed in a future major release.
+authors-1  | 2026.02.09 06:54:09 INFO com.zaxxer.hikari.HikariDataSource Thread[#1,main,5,main]: distribuida - Starting...
+authors-1  | 2026.02.09 06:54:09 INFO com.zaxxer.hikari.pool.HikariPool Thread[#1,main,5,main]: distribuida - Added connection org.postgresql.jdbc.PgConnection@4d69d288
+authors-1  | 2026.02.09 06:54:09 INFO com.zaxxer.hikari.HikariDataSource Thread[#1,main,5,main]: distribuida - Start completed.
+authors-1  | 2026.02.09 06:54:09 INFO org.hibernate.jpa.internal.util.LogHelper Thread[#1,main,5,main]: HHH000204: Processing PersistenceUnitInfo [name: pu1]
+authors-1  | 2026.02.09 06:54:10 INFO org.hibernate.Version Thread[#1,main,5,main]: HHH000412: Hibernate ORM core version 6.3.1.Final
+authors-1  | 2026.02.09 06:54:10 INFO org.hibernate.cfg.Environment Thread[#1,main,5,main]: HHH000205: Loaded properties from resource hibernate.properties: {}
+authors-1  | 2026.02.09 06:54:10 INFO org.hibernate.cache.internal.RegionFactoryInitiator Thread[#1,main,5,main]: HHH000026: Second-level cache disabled
+authors-1  | 2026.02.09 06:54:10 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator Thread[#1,main,5,main]: HHH000490: Using JTA platform [io.helidon.integrations.cdi.hibernate.CDISEJtaPlatform$Proxy$_$$_WeldClientProxy]
+authors-1  | 2026.02.09 06:54:10 WARN org.hibernate.orm.deprecation Thread[#1,main,5,main]: HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+authors-1  | 2026.02.09 06:54:11 INFO org.hibernate.validator.internal.util.Version Thread[#1,main,5,main]: HV000001: Hibernate Validator 8.0.2.Final
+authors-1  | 2026.02.09 06:54:12 WARN org.hibernate.mapping.RootClass Thread[#1,main,5,main]: HHH000038: Composite-id class does not override equals(): com.programacion.distribuida.authors.model.BookAuthorId
+authors-1  | 2026.02.09 06:54:12 WARN org.hibernate.mapping.RootClass Thread[#1,main,5,main]: HHH000039: Composite-id class does not override hashCode(): com.programacion.distribuida.authors.model.BookAuthorId
+authors-1  | 2026.02.09 06:54:13 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#1,main,5,main]: Service registered in Consul: app-authors-88ebb501bdae-8080 at 172.18.0.8:8080
+authors-1  | 2026.02.09 06:54:13 INFO com.programacion.distribuida.authors.config.ConsulServiceDiscovery Thread[#1,main,5,main]: Consul client initialized successfully
+authors-1  | 2026.02.09 06:54:13 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#1,main,5,main]: Registering JAX-RS Application: HelidonMP
+authors-1  | 2026.02.09 06:54:14 INFO io.helidon.webserver.ServerListener VirtualThread[#66,start @default (/0.0.0.0:8080)]/runnable@ForkJoinPool-1-worker-1: [0x488a0b23] http://0.0.0.0:8080 bound for socket '@default'
+authors-1  | 2026.02.09 06:54:14 INFO io.helidon.webserver.LoomServer Thread[#1,main,5,main]: Started all channels in 21 milliseconds. 11278 milliseconds since JVM startup. Java 21.0.10+8-LTS-217
+authors-1  | 2026.02.09 06:54:14 INFO io.helidon.microprofile.server.ServerCdiExtension Thread[#1,main,5,main]: Server started on http://localhost:8080 (and all other host addresses) in 11300 milliseconds (since JVM startup).
+authors-1  | 2026.02.09 06:54:14 INFO io.helidon.common.features.HelidonFeatures Thread[#73,features-thread,5,main]: Helidon MP 4.3.4 features: [Config, Fault Tolerance, JPA, JTA, Micrometer, Server]
+authors-1  | 2026.02.09 06:54:14 INFO io.helidon.common.features.HelidonFeatures.preview Thread[#73,features-thread,5,main]: You are using preview features. These APIs are production ready, yet may change more frequently. Please follow Helidon release changelog!
+authors-1  | 2026.02.09 06:54:14 INFO io.helidon.common.features.HelidonFeatures.preview Thread[#73,features-thread,5,main]: 	Preview feature: Micrometer (Micrometer)

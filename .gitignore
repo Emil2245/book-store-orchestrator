@@ -3,7 +3,19 @@
 *.iml
 *.swp
 *.swo
+**.gradle
+.env
 
+**/target/
+**/build/
+
+**/generated/
+/generated/
+**/out/
+
+db/
+**/db/
+deployment/docker/book-store/db/
 # OS
 .DS_Store
 Thumbs.db
@@ -15,5 +27,214 @@ Thumbs.db
 *.tmp
 *.bak
 
-#model for llama.cpp inside the models folder
+##############################
+## Java
+##############################
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+##############################
+## Maven
+##############################
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+##############################
+## Gradle (por si lo usas)
+##############################
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+##############################
+## IntelliJ IDEA
+##############################
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+##############################
+## Eclipse
+##############################
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.classpath
+.factorypath
+.buildpath
+.target
+.tern-project
+.texlipse
+.springBeans
+.recommenders/
+
+##############################
+## NetBeans
+##############################
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+*.code-workspace
+.history/
+
+##############################
+## OS Files
+##############################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+desktop.ini
+
+##############################
+## Vaadin Specific
+##############################
+# Frontend build artifacts
+node_modules/
+**/node_modules/
+pnpm-lock.yaml
+package-lock.json
+webpack.generated.js
+vite.generated.ts
+tsconfig.json
+types.d.ts
+index.html
+index.ts
+
+# Vaadin production bundle
+frontend/generated/
+src/main/bundles/
+src/main/dev-bundle/
+
+# Vaadin development mode
+.vaadin/
+frontend/.vaadin/
+
+##############################
+## Docker
+##############################
+# PostgreSQL data
+db/
+**/db/
+deployment/docker/book-store/db/
+postgres-data/
+
+# Docker volumes
+volumes/
+data/
+
+# Ollama models 
+ollama/
+models/
+
+##############################
+## Logs
+##############################
+*.log
+logs/
+*.log.*
+log/
+
+##############################
+## Environment & Config
+##############################
+.env
+.env.local
+.env.*.local
+*.properties.local
+application-local.yml
+application-local.properties
+secrets/
+
+##############################
+## Testing
+##############################
+coverage/
+*.coverage
+.nyc_output
+
+##############################
+## Temporary files
+##############################
+*.tmp
+*.temp
+*.cache
+.cache/
+
+##############################
+## Build artifacts
+##############################
+dist/
+build/
+*.zip
+*.tar.gz
+
+##############################
+## Micronaut specific
+##############################
+.micronaut/
+
+##############################
+## Helidon specific
+##############################
+.helidon/
+
+##############################
+## Consul/Service Discovery
+##############################
+consul-data/
+
+##############################
+## Monitoring
+##############################
+grafana-data/
+prometheus-data/
+
+##############################
+## AI/ML Models
+##############################
 *.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+llamacpp-models/
+ai-models/
