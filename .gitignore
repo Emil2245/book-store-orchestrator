@@ -14,3 +14,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+#model for llama.cpp inside the models folder
+*.gguf
